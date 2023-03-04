@@ -1,23 +1,21 @@
 import React from "react";
 import './home.css';
-import Slider from './Components/Slider/Slider';
 import Slideshow from './Advertisement';
-
 export default function Home(){
 
         return(<div>
-                         <Slider></Slider>
 
-                <div class="contact-box">
+    <div class="contact-box">
         <form action="">
             <input href="contactforblood" type="submit" name="" value="Contact for Blood"/><br></br>
             <br></br>
-            <input type="submit" name="" value="Login"/>
+            <input href="signin" type="submit" name="" value="Login"/>
             
         </form>
     </div>
-        
-        <div class="register-box">
+
+
+    <div class="register-box">
         <h2>DONATE BLOOD</h2>
         <form action="">
             <div class="input-register-box">
@@ -54,6 +52,8 @@ export default function Home(){
             <input type="submit" name="" value="Register"/>
         </form>
     </div>
+
+    
     </div>
     
     
