@@ -3,16 +3,14 @@ import './home.css';
 import Slider from './Components/Slider/Slider';
 import Slideshow from './Advertisement';
 
-class Home extends React.Component{
+export default function Home(){
 
-
-    render(){
         return(<div>
-                         {/* <Slider></Slider> */}
+                         <Slider></Slider>
 
                 <div class="contact-box">
         <form action="">
-            <input type="submit" name="" value="Contact for Blood"/><br></br>
+            <input href="contactforblood" type="submit" name="" value="Contact for Blood"/><br></br>
             <br></br>
             <input type="submit" name="" value="Login"/>
             
@@ -39,18 +37,27 @@ class Home extends React.Component{
                 <label for="">Phone Number</label>
             </div>
             
-            <input type="submit" name="" value="Choose Your Blood Group"/>
+            <div  class="input-register-box">
+                <select>
+                    <option hidden>Choose Your Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+            </div>
                 <br></br><br></br>
             <input type="submit" name="" value="Register"/>
         </form>
-
     </div>
-            
     </div>
     
     
         )
       }
-}
 
-export default Home;
+

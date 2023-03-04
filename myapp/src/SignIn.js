@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import './signin.css';
+import './signin.css';
 
     
   export default function SignIn(){
@@ -23,37 +23,39 @@ function SignInForm({onSubmit}) {
     else setEnable(true);
   };
   return (
-    <div>
-      <label>User Name</label>
-      <input
-        type="text"
-        id="username-input"
-        placeholder="username"
-        value={username}
-        onKeyUp={handleKeyUp}
-        onChange={(event) => setUsername(event.target.value)}
-      />
+    <div class="box">
+      <h2>Login</h2>
+      <div class="inputBox">
+        <label for="">User Name</label>
+        <input
+          type="text"
+          onKeyUp={handleKeyUp}
+          onChange={(event) => setUsername(event.target.value)}
+        />
+      </div>
       <br />
       <br />
-      <label>Password</label>
-      <input
-        type="password"
-        id="password-input"
-        placeholder="Password"
-        onKeyUp={handleKeyUp}
-        value={password}
-        onChange={(event) => setPassword(event.target.value)}
-      />
+      <div class="inputBox">
+        <label for="">Password</label>
+        <input
+          type="password"
+          onKeyUp={handleKeyUp}
+          onChange={(event) => setPassword(event.target.value)}
+        />
+      </div>
       <br />
       <br />
-      <button
+
+      <input type="submit" name="" value="Login"/>
+
+      {/* <button
         type="submit"
-        id="button-input"
+        // id="button-input"
         disabled={isEnable}
         onClick={() => onSubmit(username, password)}
       >
         Login
-      </button>
+      </button> */}
     </div>
   );
 }
