@@ -1,17 +1,27 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Dropdown from './ContactForBlood';
 import Home from './Home';
-import SignIn from './SignIn';
+import SignInForm from './SignIn';
 
-class App extends React.Component{
-  render(){
-    return(<div>
-             <Home></Home>
-             {/* <SignIn></SignIn> */}
-             {/* <Dropdown></Dropdown> */}
-      </div>
-    )
-  }
-  }
+export default function App(){
+  return(<BrowserRouter>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignInForm />} />
+        
+    </Routes>
+  </BrowserRouter>
 
-export default App;
+  )
+}
+
+  
+    
+    // <div>
+    //          {/* <Home></Home> */}
+    //          <SignIn></SignIn>
+    //          {/* <Dropdown></Dropdown> */}
+    //   </div>
+   

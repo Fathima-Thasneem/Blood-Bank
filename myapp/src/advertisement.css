@@ -1,4 +1,4 @@
-/* Slideshow */
+/* /* Slideshow
 
 .slideshow {
     margin: 0 auto;
@@ -21,7 +21,7 @@
   
   /* Buttons */
   
-  .slideshowDots {
+  /* .slideshowDots {
     text-align: center;
   }
   
@@ -40,4 +40,4 @@
   .slideshowDot.active {
     background-color: #6a0dad;
   }
-  
+    */ 

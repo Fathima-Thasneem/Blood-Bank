@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
 	width:100%;
 	height:auto;
 }
@@ -7,12 +7,12 @@ body {
     padding: 0;
     font-family: sans-serif;
     /* 	background: url(bg.jpg); */
-    background-image: linear-gradient(to right top, #1db9ff, #a2a0ff, #fb7ad4, #ff677a, #f48603);
+    /* background-image: linear-gradient(to right top, #1db9ff, #a2a0ff, #fb7ad4, #ff677a, #f48603);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.contact-box {
+} */
+/* .contact-box {
 	position: absolute;
 	top: 75%;
 	left: 50%;
@@ -61,7 +61,7 @@ body {
 
 
 /* REGISTER */
-.register-box {
+/* .register-box {
 	position: absolute;
 	top: 1300px;
 	left: 50%;
@@ -148,4 +148,4 @@ footer{
     height: 100px;
     width: 100px;
     background-color: #ae0d2d;
-}
+}   */

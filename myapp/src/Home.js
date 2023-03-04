@@ -8,7 +8,7 @@ class Home extends React.Component{
 
     render(){
         return(<div>
-                         <Slider></Slider>
+                         {/* <Slider></Slider> */}
 
                 <div class="contact-box">
         <form action="">
