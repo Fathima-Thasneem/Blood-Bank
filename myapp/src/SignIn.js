@@ -48,14 +48,6 @@ function SignInForm({onSubmit}) {
 
       <input type="submit" name="" value="Login"/>
 
-      {/* <button
-        type="submit"
-        // id="button-input"
-        disabled={isEnable}
-        onClick={() => onSubmit(username, password)}
-      >
-        Login
-      </button> */}
     </div>
   );
 }

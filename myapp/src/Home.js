@@ -1,15 +1,23 @@
 import React from "react";
 import './home.css';
-import Slideshow from './Advertisement';
+import { useNavigate } from "react-router-dom";
+import ImageSlider from "./ImageSlider";
 export default function Home(){
-
+    const navigate = useNavigate()
         return(<div>
-
+<ImageSlider></ImageSlider>
+<div class="form-group">
     <div class="contact-box">
         <form action="">
-            <input href="contactforblood" type="submit" name="" value="Contact for Blood"/><br></br>
+            <input href="contactforblood" type="submit" onClick={(e) => {
+                e.preventDefault()
+                navigate('/contactforblood')
+            }} name="" value="Contact for Blood"/><br></br>
             <br></br>
-            <input href="signin" type="submit" name="" value="Login"/>
+            <input type="submit" onClick={(e) => {
+                e.preventDefault()
+                navigate('/signin')
+            }} name="" value="Login"/>
             
         </form>
     </div>
@@ -52,10 +60,11 @@ export default function Home(){
             <input type="submit" name="" value="Register"/>
         </form>
     </div>
-
     
     </div>
-    
+    <ImageSlider></ImageSlider>
+
+    </div>
     
         )
       }

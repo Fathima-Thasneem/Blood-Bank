@@ -1,39 +1,70 @@
-import React from "react";
 import './contactforblood.css';
+import React, { useState,select,setPlace,place } from 'react';
 
-const { useState, useEffect } = React;
+export default function ContactForBlood(){
 
-const data = [{id: 0, label: "Istanbul, TR (AHL)"}, {id: 1, label: "Paris, FR (CDG)"}];
+  const [place, setPlace] = useState(0);
+  const { error, isLoaded, items } = useState;
 
-const Dropdown = () => {
-  const [isOpen, setOpen] = useState(false);
-  const [items, setItem] = useState(data);
-  const [selectedItem, setSelectedItem] = useState(null);
+return(<div>
+
   
-  const toggleDropdown = () => setOpen(!isOpen);
-  
-  const handleItemClick = (id) => {
-    selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
+  <div  className="select-place">
+    <h2>Search by Place</h2>
+  <select onChange={(event) => {setPlace (event.target.value) ;console.log(event.target.value)}}>
+
+      <option hidden>- - SELECT - -</option>
+      <option>KASARKODE</option>
+      <option>KANNUR</option>
+      <option>KOZHIKODE</option>
+      <option>WAYANAD</option>
+      <option>MALAPPURAM</option>
+      
+  </select>
+
+</div>
+{  place != 0 &&  
+<table className="place-table">
+                  <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Phone Number</th>
+                          <th>Place</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                  
+                      <tr >
+                          <td>1</td>
+                          <td>Thesni</td>
+                          <td>9876543210</td>
+                          <td>MALAPPURAM</td>            
+                        </tr>
+                        <tr >
+                          <td>2</td>
+                          <td>Thesni</td>
+                          <td>9876543210</td>
+                          <td>MALAPPURAM</td>            
+                        </tr>
+                        <tr >
+                          <td>3</td>
+                          <td>Thesni</td>
+                          <td>9876543210</td>
+                          <td>MALAPPURAM</td>            
+                        </tr>
+                  </tbody>
+    </table>
   }
-  
-  return (
-    <div className='dropdown'>
-      <div className='dropdown-header' onClick={toggleDropdown}>
-        {selectedItem ? items.find(item => item.id == selectedItem).label : "Select your destination"}
-        <i className={`fa fa-chevron-right icon ${isOpen && "open"}`}></i>
-      </div>
-      <div className={`dropdown-body ${isOpen && 'open'}`}>
-        {items.map(item => (
-          <div className="dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
-            <span className={`dropdown-item-dot ${item.id == selectedItem && 'selected'}`}>• </span>
-            {item.label}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+
+
+
+</div>
+
+
+)
+
+
+
 }
-
-// ReactDOM.render(<Dropdown />, document.getElementById('app'));
-
-export default Dropdown;
