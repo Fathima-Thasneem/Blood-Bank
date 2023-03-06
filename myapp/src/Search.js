@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './home.css';
+import './search.css';
 
 export default function Search() {
     const navigate = useNavigate()
@@ -8,7 +8,7 @@ export default function Search() {
     return(
         <div>
 
-<div class="contact-box">
+<div className="search-box">
         <form action="">
             <input href="contactforblood" type="submit" onClick={(e) => {
                 e.preventDefault()

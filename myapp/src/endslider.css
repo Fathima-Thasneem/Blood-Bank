@@ -1,0 +1,17 @@
+.end-slide-container {
+    padding: 40px;
+    /* background: #121212; */
+  }
+  
+  
+  .slick-prev {
+    left: 3% !important;
+    z-index: 1;
+  }
+  .slick-next {
+    right: 3% !important;
+    z-index: 1;
+  }
+  .slick-slide img {
+    margin: auto;
+  }

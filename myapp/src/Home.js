@@ -2,6 +2,7 @@ import React from "react";
 import './home.css';
 import { useNavigate } from "react-router-dom";
 import ImageSlider from "./ImageSlider";
+import EndSlider from "./EndSlider";
 export default function Home(){
     const navigate = useNavigate()
         return(<div>
@@ -62,7 +63,7 @@ export default function Home(){
     </div>
     
     </div>
-    <ImageSlider></ImageSlider>
+    <EndSlider></EndSlider>
 
     </div>
     
