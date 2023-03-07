@@ -26,22 +26,27 @@ function SignInForm({onSubmit}) {
     <div class="box">
       <h2>Login</h2>
       <div class="inputBox">
-        <label for="">User Name</label>
         <input
+        className="ipt"
           type="text"
           onKeyUp={handleKeyUp}
           onChange={(event) => setUsername(event.target.value)}
         />
+        <label for="">User Name</label>
+
       </div>
       <br />
       <br />
       <div class="inputBox">
-        <label for="">Password</label>
         <input
+        className="ipt"
+
           type="password"
           onKeyUp={handleKeyUp}
           onChange={(event) => setPassword(event.target.value)}
         />
+        <label for="">Password</label>
+
       </div>
       <br />
       <br />

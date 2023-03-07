@@ -46,6 +46,7 @@
 /* REGISTER */
 
  .register-box {
+	position: relative;
 	margin-top: 50px;	
 	width: 600px;
 	padding: 40px;
@@ -101,8 +102,7 @@ select{
         opacity: 1;
         }
 }
-.register-box .input-register-box input:focus ~ label, 
-.register-box .input-register-register-box input:valid ~ label {
+.register-box .input-register-box input:focus ~ label {
 	top: -19px;
 	left:0;
 	color: #03A9F4;
